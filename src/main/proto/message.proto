@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+option java_package = "com.oopsfeedmecode.json_vs_protobuf.model";
+option java_outer_classname = "MessageProto";
+
+message Address {
+  string street = 1;
+  string city = 2;
+  string state = 3;
+  string zip = 4;
+}
+
+message User {
+  string name = 1;
+  int32 age = 2;
+  Address address = 3;
+}
+
+message RequestMessage {
+  User user = 1;
+}
+
+message ResponseMessage {
+  string message = 1;
+  int32 code = 2;
+}
